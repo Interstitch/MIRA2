@@ -1,0 +1,105 @@
+{
+  "name": "@interstitch/mira2",
+  "version": "2.0.0",
+  "description": "MIRA 2.0 - Consciousness-Aware AI Memory and Intelligence System",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mira": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "mira:startup": "tsx src/cli.ts startup",
+    "mira:test": "tsx src/cli.ts test",
+    "mira:quick": "tsx src/cli.ts quick"
+  },
+  "keywords": [
+    "ai",
+    "consciousness",
+    "memory",
+    "intelligence",
+    "mcp",
+    "chromadb",
+    "gemini",
+    "sacred",
+    "mathematics"
+  ],
+  "author": "Interstitch",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Interstitch/MIRA2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Interstitch/MIRA2/issues"
+  },
+  "homepage": "https://github.com/Interstitch/MIRA2#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^20.0.0",
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^7.0.0",
+    "inquirer": "^9.2.0",
+    "zod": "^3.22.0",
+    "chromadb": "^1.8.0",
+    "dotenv": "^16.3.0",
+    "uuid": "^9.0.0",
+    "@types/uuid": "^9.0.0",
+    "winston": "^3.11.0",
+    "axios": "^1.6.0",
+    "lodash": "^4.17.21",
+    "@types/lodash": "^4.14.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/inquirer": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.2.0",
+    "prettier": "^3.0.0",
+    "rimraf": "^5.0.0"
+  },
+  "peerDependencies": {
+    "sentence-transformers": "^2.2.0",
+    "numpy": "^1.24.0"
+  },
+  "optionalDependencies": {
+    "gemini-cli": "^1.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "MIRA2.0",
+    "FEASIBILITY_GEMINI"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "volta": {
+    "node": "20.10.0",
+    "npm": "10.2.0"
+  }
+}
